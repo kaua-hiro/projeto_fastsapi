@@ -1,4 +1,4 @@
-Lista de Tarefas
+# Lista de Tarefas
 Este projeto consiste em uma aplicação simples para gerenciamento de tarefas, desenvolvida com uma arquitetura modular para promover a reutilização de código.
 
 Tecnologias Utilizadas
