@@ -1,64 +1,60 @@
-# Lista de Tarefas
+Lista de Tarefas
+Este projeto consiste em uma aplicação simples para gerenciamento de tarefas, desenvolvida com uma arquitetura modular para promover a reutilização de código.
 
-Este projeto é uma aplicação simples de lista de tarefas, desenvolvida com uma estrutura modularizada para facilitar a reutilização do código.
+Tecnologias Utilizadas
+Backend: FastAPI
 
-## Tecnologias Utilizadas
+Banco de Dados: OracleDB
 
-- Backend: FastAPI
-- Banco de Dados: OracleDB
-- Frontend: HTML5
+Frontend: HTML5
 
-## Como Executar o Projeto
+Como Executar o Projeto
+Para rodar o projeto localmente, siga as etapas abaixo:
 
-Para rodar este projeto localmente, siga os passos abaixo:
+1. Criar e ativar um ambiente virtual
+bash
+Copiar
+Editar
+python -m venv venv  
+# No Windows  
+venv\Scripts\activate  
+# No macOS/Linux  
+source venv/bin/activate  
+2. Instalar as dependências
+bash
+Copiar
+Editar
+pip install -r requirements.txt  
+O arquivo requirements.txt contém todas as bibliotecas necessárias para a execução do projeto.
 
-### Criar um ambiente virtual
-```
-python -m venv venv
-```
+3. Criar o arquivo .env
+Na raiz do projeto, crie um arquivo chamado .env e adicione as credenciais do banco de dados:
 
-### Ativar o ambiente virtual
-```
-venv\Scripts\activate
-```
-
-### Instalar as dependências
-```
-pip install -r requirements.txt
-```
-
-requirements.txt é a lista de dependências necessárias para o projeto.
-
-### Criar o arquivo .env
-Na raiz do projeto, crie um arquivo chamado .env e adicione as seguintes informações:
-
-```
-ORACLE_USER=seu_nome
-ORACLE_PASSWORD=sua_senha
-ORACLE_DSN=seu_localhost
-```
-
+ini
+Copiar
+Editar
+ORACLE_USER=seu_usuario  
+ORACLE_PASSWORD=sua_senha  
+ORACLE_DSN=seu_host  
 Exemplo de ORACLE_DSN: localhost:1234/xepdb1 ou xe.
 
-### Executar o projeto
-```
-python main.py
-```
+4. Executar a aplicação
+bash
+Copiar
+Editar
+python main.py  
+Após isso, a API estará disponível para uso.
 
-Isso inicializará a API e a aplicação estará pronta para uso.
-
-## Estrutura do Projeto
-
-```
+Estrutura do Projeto
+bash
+Copiar
+Editar
 .
 ├── main.py                # Arquivo principal que inicia a aplicação
-├── models/                # Definições das tabelas e conexões com o banco de dados
-├── routes/                # Definição das rotas do FastAPI
-├── templates/             # Arquivos HTML para o frontend
-├── controller/            # Funções responsáveis por interagir com o modelo de dados
-└── .env                   # Arquivo com credenciais do banco de dados (não incluso no repositório por segurança)
-```
-
-## Importante
-
-Qualquer usuário que deseje rodar este projeto precisa ter uma conta no Oracle Database e configurar corretamente o .env.
+├── models/                # Definição das tabelas e conexões com o banco de dados
+├── routes/                # Endpoints da API (FastAPI)
+├── templates/             # Arquivos HTML utilizados no frontend
+├── controller/            # Lógica de interação com os modelos de dados
+└── .env                   # Configuração do banco de dados (excluído do repositório por segurança)
+Observação
+Para utilizar este projeto, é necessário ter uma conta no Oracle Database e configurar corretamente o arquivo .env.
